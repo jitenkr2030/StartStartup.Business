@@ -1,189 +1,189 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Homepage Layout */
-.homepage {
+/* Home Page Layout */
+.home-container {
   text-align: center;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-.homepage-header {
-  margin-bottom: 40px;
+.header {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-.homepage-header h1 {
-  font-size: 2.5rem;
-  color: #333;
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
 }
 
-.homepage-header p {
-  font-size: 1.2rem;
-  color: #555;
+.header p {
+  font-size: 1.5rem;
+  margin: 15px 0 30px;
 }
 
-.homepage-buttons {
-  margin: 20px;
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-.btn {
+.btn-primary, .btn-secondary {
   display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 24px;
   font-size: 1rem;
   font-weight: bold;
+  border-radius: 30px;
   text-decoration: none;
-  border-radius: 5px;
-  color: #fff;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #ff7e5f;
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #feb47b;
+  transform: translateY(-3px);
 }
 
 .btn-secondary {
-  background-color: #28a745;
+  background-color: #343a40;
+  color: #fff;
 }
 
 .btn-secondary:hover {
-  background-color: #218838;
+  background-color: #495057;
+  transform: translateY(-3px);
 }
 
-.btn-lg {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-}
-
-/* Slider Styles */
+/* Slider Section */
 .slider {
-  margin: 40px 0;
+  background: #fff;
+  padding: 40px 0;
+  margin-bottom: 30px;
 }
 
-.slider-slide {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 600px;
-  margin: auto;
+.slider-content {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
-.slider-slide h2 {
-  font-size: 1.8rem;
+.slide {
+  display: none;
+  padding: 20px;
+}
+
+.slide.active {
+  display: block; /* Show active slide */
+}
+
+.slider-content .slide h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.slider-content .slide p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.feature {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+}
+
+.feature h2 {
+  margin-top: 0;
   color: #333;
 }
 
-.slider-slide p {
-  font-size: 1rem;
+.feature p {
   color: #666;
 }
 
-/* Features, Testimonials, CTA Styles */
-.features, .testimonials, .cta {
-  margin: 40px 0;
-  padding: 20px;
-}
-
-.features-container, .testimonials-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.feature, .testimonial {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 300px;
+/* Footer Section */
+.footer {
+  background: #343a40;
+  color: #fff;
+  padding: 30px 0;
   text-align: center;
 }
 
-.testimonial {
-  font-style: italic;
+.footer-links {
+  margin-top: 10px;
 }
 
-.testimonial footer {
-  text-align: right;
-  font-size: 0.9rem;
-  color: #666;
+.footer-links a {
+  color: #adb5bd;
+  margin: 0 15px;
+  text-decoration: none;
 }
 
-.cta {
-  background-color: #007bff;
-  color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-}
-
-.cta h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.cta p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.cta .btn {
-  font-size: 1.2rem;
-  padding: 15px 30px;
-}
-
-/* Footer Styles */
-.homepage-footer {
-  margin-top: auto;
-  padding: 10px;
-  background-color: #333;
+.footer-links a:hover {
   color: #fff;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .features-container, .testimonials-container {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1.25rem;
+  }
+
+  .cta-buttons {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
-  .feature, .testimonial {
-    max-width: 100%;
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 350px;
   }
 
-  .homepage-header h1 {
+  .slider-content .slide h2 {
     font-size: 2rem;
   }
 
-  .homepage-header p {
-    font-size: 1rem;
+  .slider-content .slide p {
+    font-size: 1.15rem;
   }
 
-  .cta h2 {
-    font-size: 1.5rem;
+  .features {
+    gap: 20px;
   }
 
-  .cta p {
-    font-size: 1rem;
+  .feature {
+    padding: 20px;
   }
 }
+
