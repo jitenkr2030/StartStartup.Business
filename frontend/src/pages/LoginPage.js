@@ -1,29 +1,50 @@
 import React, { useState } from 'react';
-import authService from '../services/authService';
+import './LoginPage.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    authService.login(email, password).then(response => {
-      // Redirect or handle login success
-      console.log(response.data);
-    });
+    // Add login logic here
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
-        <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
+    <div className="login-container">
+      <div className="login-card">
+        <h2>Login to Your Account</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="btn-primary">Login</button>
+        </form>
+        <p className="login-footer">
+          Don't have an account? <a href="/signup">Sign Up</a>
+        </p>
+      </div>
     </div>
   );
 };
 
 export default LoginPage;
+
 
