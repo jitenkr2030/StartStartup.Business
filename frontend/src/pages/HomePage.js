@@ -49,15 +49,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Personalized AI Assistance Section */}
-      <section className="ai-assistance">
-        <div className="container">
-          <h2>Personalized AI Assistance</h2>
-          <p>Get real-time recommendations tailored to your startup’s needs. Our AI Advisor provides guidance on growth, funding, and market expansion.</p>
-          <a href="/signup" className="btn-primary">Start Your Free Trial</a>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section className="testimonials">
         <div className="container">

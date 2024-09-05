@@ -10,6 +10,11 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the StartStartup Backend!');
+});
+
 // Sample route (secured)
 app.get('/api/protected', authMiddleware, (req, res) => {
   res.json({ message: 'This is a protected route', user: req.user });
